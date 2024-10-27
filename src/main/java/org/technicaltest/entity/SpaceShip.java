@@ -1,10 +1,9 @@
 package org.technicaltest.entity;
 
-import java.util.List;
-
+import jakarta.persistence.*;
 import lombok.*;
 
-import jakarta.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "spaceships")

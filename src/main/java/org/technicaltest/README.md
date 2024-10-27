@@ -1,2 +1,0 @@
-# technicaltest
- desafio tecnico 
