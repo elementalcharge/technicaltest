@@ -1,0 +1,144 @@
+{
+  "info": {
+    "name": "SpaceShip API",
+    "_postman_id": "spaceship-api-collection",
+    "description": "Collection for SpaceShip API endpoints",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All SpaceShips",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/spaceships?page=0&size=10&sort=id,asc",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "spaceships"],
+          "query": [
+            {
+              "key": "page",
+              "value": "0"
+            },
+            {
+              "key": "size",
+              "value": "10"
+            },
+            {
+              "key": "sort",
+              "value": "id,asc"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get SpaceShip by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/spaceships/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "spaceships", "1"]
+        }
+      }
+    },
+    {
+      "name": "Create SpaceShip",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"space_ship_name\": \"Millennium Falcon\",\n    \"movies\": \"Star Wars: A New Hope;Star Wars: The Empire Strikes Back;Star Wars: Return of the Jedi\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/spaceships",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "spaceships"]
+        }
+      }
+    },
+    {
+      "name": "Update SpaceShip",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"space_ship_name\": \"Updated Millennium Falcon\",\n    \"movies\": \"Star Wars: A New Hope;Star Wars: The Empire Strikes Back;Star Wars: Return of the Jedi;Star Wars: The Force Awakens\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/spaceships/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "spaceships", "1"]
+        }
+      }
+    },
+    {
+      "name": "Delete SpaceShip",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/spaceships/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "spaceships", "1"]
+        }
+      }
+    },
+    {
+      "name": "Search SpaceShips",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/spaceships/search?name=falcon&page=0&size=10&sort=name,asc",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "spaceships", "search"],
+          "query": [
+            {
+              "key": "name",
+              "value": "falcon"
+            },
+            {
+              "key": "page",
+              "value": "0"
+            },
+            {
+              "key": "size",
+              "value": "10"
+            },
+            {
+              "key": "sort",
+              "value": "name,asc"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

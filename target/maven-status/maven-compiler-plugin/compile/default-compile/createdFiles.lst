@@ -1,0 +1,4 @@
+org\technicaltest\aspect\LogNegativeIdAspect.class
+org\technicaltest\entity\SpaceShip.class
+org\technicaltest\repository\ISpaceShipRepository.class
+org\technicaltest\repository\SpaceShipRepository.class
